@@ -44,6 +44,10 @@ rl.on('line', (line) => {
       var input = line.trim();
       if (ipaddr.isValid(input)) {
         var addr = ipaddr.parse(input);
+        if (addr.kind() == 'ipv6') {
+          console.log("Sorry, IPv6 addresses are not currently supported!");
+          break;
+        }
         ipAddresses.push(addr);
         console.log(input + ' added to list');
       } else {

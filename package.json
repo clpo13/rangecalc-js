@@ -4,7 +4,7 @@
   "description": "Find the CIDR range of a set of IP addresses.",
   "main": "./bin/rangecalc-cli.js",
   "bin": {
-    "rangecalc-js": "./bin/rangecalc-cli.js"
+    "rangecalc-cli": "./bin/rangecalc-cli.js"
   },
   "scripts": {
     "test": "mocha test"
