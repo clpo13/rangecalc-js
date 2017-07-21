@@ -1,8 +1,16 @@
 language: node_js
 node_js:
-  - "node"
-  - "6"
-  - "4"
+  - node
+  - '6'
+  - '4'
 cache:
   directories:
-    - "node_modules"
+    - node_modules
+deploy:
+  provider: npm
+  email: clpo13@gmail.com
+  api_key:
+    secure: EdmJ8iFzD7uL56eZ9KP7o4F4Y0sPTSZWycCMVf+YRUBZUIjnpHvC1CEWbG01AmFPCc3Ybdx3E0mA68cwpjsDseZzlaycj0Xwe5HFfSpUfHnIXXMBkJ256nB//5FHZUj1pKMHCaFiWh5E4E3RQkRfgBG7TtvkD+EvE/MFYvwHnQVE7gHrjEagTfNaUS83NJ0WwY+jBHL1p7e4vgtBqGZU8R2APNklU1lUGB5R87ilFPxCO9zBhYcm3u937wE0KzplaG0XqV8Aev+4krKO+Mi3FAxybkl4XWiT5YpNSnniQqjuunuRFrFVYw7oesGp02aHwqb2QEnl7z6sx5fsN9Qx2wHa8QlK7oNok09xosRKoSlV5m9XNDleA+hcgfqfI+ZZtmt95mzjkgbJ8D6yYpr36ALXm4g9QVdKXkTAVmiGaQkVGpnLNOC7TvJEl+JoiXJNN1zb/FEPTCoBoFgiLxJfMCyBVa2AjD2LWW5N7w68kfaoAiCBHYVWBKmsjRp/uuG+seibt9G/sbE1puaHcQM1XlL+PH2VpPsxjfR0yAJwEWoK/Ebr1mFa2Z+6NYlW5p+8vsfk/MT8QNCfpwfiSNzbGlNCsHQiMV3TEFGEHYjdUsBXwj4VNEKtpeljbOQONE8TmDDpi1Wp7tB7rm01eCmjNa4/C0fpMpqvvN6uOBwcgIM=
+  on:
+    tags: true
+    repo: clpo13/rangecalc-js
