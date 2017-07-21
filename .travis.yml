@@ -14,3 +14,4 @@ deploy:
   on:
     tags: true
     repo: clpo13/rangecalc-js
+    node: node
