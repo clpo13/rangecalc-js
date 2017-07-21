@@ -32,8 +32,15 @@ describe('Rangecalc', function() {
 
   describe('IPv6', function() {
 
-    it('should return the proper range');
+    it('should return the proper range', function() {
+      var start = ipaddr.parse('2001:4860:4860::8844');
+      var end = ipaddr.parse('2001:4860:4860::8888');
+      assert(rangecalc.getCIDR(start, end) == 120);
+    });
 
-    it('should return the right integer representation');
+    it('should return the right integer representation', function() {
+      var ip = ipaddr.parse('2001:4860:4860::8888');
+      assert(rangecalc.toInt(ip) == 42541956123769884636017138956568135816);
+    });
   });
 });
