@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const ipaddr = require('ipaddr.js');
+const Address6 = require('ip-address').Address6;
 const readline = require('readline');
 const rangecalc = require('../lib/rangecalc');
 
@@ -24,7 +25,12 @@ rl.on('line', (line) => {
       break;
     case 'list':
       for (var i in ipAddresses) {
-        console.log(ipAddresses[i].toString());
+        var ip = ipAddresses[i];
+        if (ip instanceof Address6) {
+          console.log(ip.address);
+        } else {
+          console.log(ip.toString());
+        }
       }
       break;
     case 'clear':
@@ -45,8 +51,8 @@ rl.on('line', (line) => {
       if (ipaddr.isValid(input)) {
         var addr = ipaddr.parse(input);
         if (addr.kind() == 'ipv6') {
-          console.log("Sorry, IPv6 addresses are not currently supported!");
-          break;
+          // Convert to Address6 object provided by ip-address
+          addr = new Address6(addr.toString());
         }
         ipAddresses.push(addr);
         console.log(input + ' added to list');

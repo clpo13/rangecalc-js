@@ -17,6 +17,7 @@
   "keywords": [
     "ip",
     "ipv4",
+    "ipv6",
     "cidr"
   ],
   "author": "Cody Logan <clpo13@gmail.com>",
@@ -31,6 +32,7 @@
     "nyc": "^11.0.3"
   },
   "dependencies": {
+    "ip-address": "^5.8.8",
     "ipaddr.js": "^1.4.0"
   }
 }
