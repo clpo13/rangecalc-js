@@ -1,6 +1,6 @@
 var assert = require('assert');
 var ipaddr = require('ipaddr.js');
-var rangecalc = require('../bin/rangecalc');
+var rangecalc = require('../lib/rangecalc');
 
 describe('Rangecalc', function() {
   it('should return the proper range', function() {
