@@ -23,7 +23,9 @@ rl.on('line', (line) => {
       console.log('Range is ' + cidr);
       break;
     case 'list':
-      console.log(ipAddresses);
+      for (var i in ipAddresses) {
+        console.log(ipAddresses[i].toString());
+      }
       break;
     case 'clear':
       ipAddresses = [];
