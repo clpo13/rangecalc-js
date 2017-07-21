@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/clpo13/rangecalc-js.svg?branch=master)](https://travis-ci.org/clpo13/rangecalc-js)
 [![Dependency Status](https://david-dm.org/clpo13/rangecalc-js.svg)](https://david-dm.org/clpo13/rangecalc-js)
 [![devDependency Status](https://david-dm.org/clpo13/rangecalc-js/dev-status.svg)](https://david-dm.org/clpo13/rangecalc-js#info=devDependencies)
+[![codecov](https://codecov.io/gh/clpo13/rangecalc-js/branch/master/graph/badge.svg)](https://codecov.io/gh/clpo13/rangecalc-js)
 
 Find the CIDR range of a set of IPv4 addresses. Requires [Node.js](https://nodejs.org).
 
