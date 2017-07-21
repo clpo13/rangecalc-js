@@ -1,0 +1,33 @@
+{
+  "name": "rangecalc",
+  "version": "1.0.0",
+  "description": "Find the CIDR range of a set of IP addresses.",
+  "main": "./bin/rangecalc.js",
+  "bin": {
+    "rangecalc-js": "./bin/rangecalc.js"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clpo13/rangecalc-js.git"
+  },
+  "keywords": [
+    "ip",
+    "ipv4",
+    "cidr"
+  ],
+  "author": "Cody Logan <clpo13@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/clpo13/rangecalc-js/issues"
+  },
+  "homepage": "https://github.com/clpo13/rangecalc-js#readme",
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "ipaddr.js": "^1.4.0"
+  }
+}
