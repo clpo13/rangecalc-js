@@ -7,8 +7,6 @@ var self = module.exports = {
   getCIDR: function(start, end) {
     var startInt = self.toInt(start);
     var endInt = self.toInt(end);
-    console.log(startInt);
-    console.log(endInt);
     var binaryXOR = startInt ^ endInt;
     if (binaryXOR == 0) {
       return 32;
