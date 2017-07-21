@@ -12,6 +12,12 @@ describe('Rangecalc', function() {
       assert(rangecalc.getCIDR(start, end) == 24);
     });
 
+    it('should return 32 when the IP addresses are identical', function() {
+      var start = ipaddr.parse('192.168.0.1');
+      var end = start;
+      assert(rangecalc.getCIDR(start, end) == 32);
+    });
+
     it('should return the right integer representation', function() {
       var ip = ipaddr.parse('192.168.0.1');
       assert(rangecalc.toInt(ip) == 3232235521);
