@@ -18,8 +18,8 @@ rl.prompt();
 rl.on('line', (line) => {
   switch (line.trim()) {
     case 'calc':
-      ipAddresses.sort(function(a, b) { return rangecalc.toInt(a) - rangecalc.toInt(b) });
-      var cidr = rangecalc.getCIDR(ipAddresses[0], ipAddresses[ipAddresses.length-1])
+      var arr = rangecalc.sort(ipAddresses);
+      var cidr = rangecalc.getCIDR(arr[0], arr[arr.length-1])
       console.log('Range is ' + cidr);
       break;
     case 'list':
