@@ -13,6 +13,7 @@ const rl = readline.createInterface({
 
 var ipAddresses = [];
 
+console.log("Enter an IP address or type '.help'.");
 rl.prompt();
 
 rl.on('line', (line) => {
@@ -33,7 +34,11 @@ rl.on('line', (line) => {
       break;
     case '.help':
     case '.h':
-      console.log('Input IP addresses and then enter \'calc\' to get a range.');
+      console.log('Input IP addresses one per line. Commands:\n' +
+        '\tlist - shows current list of IP addresses\n' +
+        '\tcalc - get the CIDR range\n' +
+        '\t.help, .h - show this text\n' +
+        '\t.exit, .quit, .q - exit the program');
       break;
     case '.exit':
     case '.quit':
