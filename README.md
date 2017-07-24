@@ -1,4 +1,4 @@
-# rangecalc-cli
+# rangecalc
 
 [![Build Status](https://travis-ci.org/clpo13/rangecalc-js.svg?branch=master)](https://travis-ci.org/clpo13/rangecalc-js)
 [![Dependency Status](https://david-dm.org/clpo13/rangecalc-js.svg)](https://david-dm.org/clpo13/rangecalc-js)
@@ -9,9 +9,15 @@ Find the CIDR range of a set of IPv4 addresses. Requires [Node.js](https://nodej
 
 ## Get it
 
-Install with `npm install -g rangecalc-cli` and run with `rangecalc-cli`.
+Install with `npm install -g rangecalc`. Use it in your code with `var rangecalc = require('rangecalc');`.
 
-Alternately, clone or fork this repository and run `npm install --production` in the root directory. Run the program with `./bin/rangecalc-cli.js`.
+A simple CLI program is included to demonstrate range calculation. Run with `rangecalc-cli`.
+
+## Use it
+
+- `getCIDR`: Calculate the CIDR range of two IP addresses. Uses the address objects provided by [ipaddr.js](https://github.com/whitequark/ipaddr.js).
+- `getInt`: Calculate an integer representation of an IP address.
+- `sort`: Sort an array of IP addresses.
 
 ## Improve it
 
