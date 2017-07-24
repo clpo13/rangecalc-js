@@ -9,7 +9,7 @@
   "scripts": {
     "test": "nyc mocha test",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "doc": "documentation build lib/rangecalc.js -f html -o docs"
+    "docs": "documentation build lib/rangecalc.js -f html -o docs"
   },
   "repository": {
     "type": "git",
