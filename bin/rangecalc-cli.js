@@ -25,7 +25,7 @@ rl.on('line', (line) => {
       break;
     case 'list':
       for (var i in ipAddresses) {
-        console.log(ipAddresses[i].toString());
+        console.log(ipAddresses[i]);
       }
       break;
     case 'clear':
@@ -48,12 +48,11 @@ rl.on('line', (line) => {
     default:
       var input = line.trim();
       if (ipaddr.isValid(input)) {
-        var addr = ipaddr.parse(input);
-        if (addr.kind() == 'ipv6') {
+        if (ipaddr.parse(input).kind() == 'ipv6') {
           console.log("Sorry, IPv6 addresses are not currently supported!");
           break;
         }
-        ipAddresses.push(addr);
+        ipAddresses.push(input);
         console.log(input + ' added to list');
       } else {
         console.log(input + ' is not a valid IP address');

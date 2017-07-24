@@ -15,9 +15,11 @@ A simple CLI program is included to demonstrate range calculation. Run with `ran
 
 ## Use it
 
-- `getCIDR`: Calculate the CIDR range of two IP addresses. Uses the address objects provided by [ipaddr.js](https://github.com/whitequark/ipaddr.js).
+- `getCIDR`: Calculate the CIDR range of two IP addresses.
 - `getInt`: Calculate an integer representation of an IP address.
 - `sort`: Sort an array of IP addresses.
+
+More information on the functions available can be found [here](https://clpo13.github.io/rangecalc-js).
 
 ## Improve it
 

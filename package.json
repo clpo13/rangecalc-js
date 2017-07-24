@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "nyc mocha test",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "doc": "documentation build lib/rangecalc.js -f html -o docs"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "homepage": "https://github.com/clpo13/rangecalc-js#readme",
   "devDependencies": {
     "codecov": "^2.2.0",
+    "documentation": "^4.0.0-rc.1",
     "mocha": "^3.4.2",
     "nyc": "^11.0.3"
   },
