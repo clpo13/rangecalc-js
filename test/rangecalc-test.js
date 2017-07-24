@@ -1,5 +1,6 @@
 var assert = require('assert')
 var rangecalc = require('../lib/rangecalc')
+var lint = require('mocha-eslint')
 
 describe('Rangecalc', function () {
   describe('IPv4', function () {
@@ -32,4 +33,22 @@ describe('Rangecalc', function () {
 
     it('should return the right integer representation')
   })
+})
+
+describe('lint', function () {
+  var paths = [
+    'bin',
+    'lib',
+    'test'
+  ]
+
+  var options = {
+    formatter: 'stylish',
+    alwaysWarn: false,
+    timeout: 5000,
+    slow: 1000,
+    strict: true
+  }
+
+  lint(paths, options)
 })
