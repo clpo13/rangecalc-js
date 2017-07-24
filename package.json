@@ -9,7 +9,8 @@
   "scripts": {
     "test": "nyc mocha test",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "docs": "documentation build lib/rangecalc.js -f html -o docs"
+    "docs": "documentation build lib/rangecalc.js -f html -o docs",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,12 @@
   "devDependencies": {
     "codecov": "^2.2.0",
     "documentation": "^4.0.0-rc.1",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.4.2",
     "nyc": "^11.0.3"
   },
