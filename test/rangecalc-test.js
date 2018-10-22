@@ -1,5 +1,5 @@
 // rangecalc - get the CIDR range of a set of IP addresses
-// Copyright (C) 2017 Cody Logan
+// Copyright (C) 2017–2018 Cody Logan
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
