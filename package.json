@@ -29,6 +29,7 @@
   "homepage": "https://github.com/clpo13/rangecalc-js#readme",
   "devDependencies": {
     "codecov": "^3.5.0",
+    "diff": "^4.0.1",
     "documentation": "^8.1.2",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
