@@ -1,18 +1,17 @@
 language: node_js
 node_js:
-  - node
-  - lts/*
-  - '6'
+- node
+- lts/*
+- '6'
 cache:
   directories:
-    - node_modules
+  - node_modules
 deploy:
   provider: npm
   email: clpo13@gmail.com
   api_key:
-    secure: EdmJ8iFzD7uL56eZ9KP7o4F4Y0sPTSZWycCMVf+YRUBZUIjnpHvC1CEWbG01AmFPCc3Ybdx3E0mA68cwpjsDseZzlaycj0Xwe5HFfSpUfHnIXXMBkJ256nB//5FHZUj1pKMHCaFiWh5E4E3RQkRfgBG7TtvkD+EvE/MFYvwHnQVE7gHrjEagTfNaUS83NJ0WwY+jBHL1p7e4vgtBqGZU8R2APNklU1lUGB5R87ilFPxCO9zBhYcm3u937wE0KzplaG0XqV8Aev+4krKO+Mi3FAxybkl4XWiT5YpNSnniQqjuunuRFrFVYw7oesGp02aHwqb2QEnl7z6sx5fsN9Qx2wHa8QlK7oNok09xosRKoSlV5m9XNDleA+hcgfqfI+ZZtmt95mzjkgbJ8D6yYpr36ALXm4g9QVdKXkTAVmiGaQkVGpnLNOC7TvJEl+JoiXJNN1zb/FEPTCoBoFgiLxJfMCyBVa2AjD2LWW5N7w68kfaoAiCBHYVWBKmsjRp/uuG+seibt9G/sbE1puaHcQM1XlL+PH2VpPsxjfR0yAJwEWoK/Ebr1mFa2Z+6NYlW5p+8vsfk/MT8QNCfpwfiSNzbGlNCsHQiMV3TEFGEHYjdUsBXwj4VNEKtpeljbOQONE8TmDDpi1Wp7tB7rm01eCmjNa4/C0fpMpqvvN6uOBwcgIM=
+    secure: KoDhLzUE+a/sWUA7gwcf8W9OSCHaArpZEhI02uP9A5kHimozFAL+lUWjgcBJn2ajIEdS4DHBKQktT1NLHNs95wygcZ8yAeyZJr95lx5wMd2P7CB5I1ak/y9YcQU1v3q2B28EgqrhQGhLnwC/0G/RGmi9HTPVHV3P5jJIOdh8zpTqeGa+ZrD9thOH7ulqZC9C/7cgM0rtNxE2oYyB8hXOPqYQya2SF3MLQho7tv62tzO7P3nryPuM/fbkhF34qGTtwMy8wsWqx5QwhKsm9nHvmTbTz6HM8Fjo+WXLr8EjdLKugO48ZTcbZHYXG0imq87Dy+lNIYcAXl3AV5VtMEqqySu8xoLpCFe1Oze/0DdlFb32n+ywStGm3sTuknwjGthUj9VyJBZP6XFPbqejDl/nQnPoIa7d9FDPDyzS1SftsW++ympEm/pBOfnPW+qgKuvvVI3FyxwWXKwHzhefY981GLn4nj2FMh7poHYLWMzicehxZh19FHiCLm1Zbs2NfNoCgF+EYdQvDGCY3kCy0jUj5lCRyiVikCb8Qx4xKCo44PhBfAVrSa1yuh89nJvayiIqa0s6SF1hv7HbL7ZGMR1qeoTlZ89w+vLjG5GmUhrb7kRmSQPGtjjDpO/gdRtoB4xQU9pqMAilndDTeT7WZA0rC2PbA3p3QUCAOvhowPtz+0g=
   on:
     tags: true
     repo: clpo13/rangecalc-js
-    node: node
 after_success: npm run coverage
