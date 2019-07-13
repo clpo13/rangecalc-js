@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/clpo13/rangecalc-js/branch/master/graph/badge.svg)](https://codecov.io/gh/clpo13/rangecalc-js)
 [![npm](https://img.shields.io/npm/v/rangecalc.svg)](https://www.npmjs.com/package/rangecalc)
 
-Find the CIDR range of a set of IPv4 addresses. Requires [Node.js](https://nodejs.org).
+Find the CIDR range of a set of IPv4 addresses. Requires [Node.js](https://nodejs.org) 8 or later.
 
 ## Get it
 
