@@ -1,6 +1,6 @@
 {
   "name": "rangecalc",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Find the CIDR range of a set of IP addresses.",
   "main": "./lib/rangecalc.js",
   "bin": {
@@ -22,23 +22,24 @@
     "cidr"
   ],
   "author": "Cody Logan <clpo13@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/clpo13/rangecalc-js/issues"
   },
   "homepage": "https://github.com/clpo13/rangecalc-js#readme",
   "devDependencies": {
+    "acorn": "^6.0.0",
     "codecov": "^3.5.0",
     "diff": "^4.0.1",
-    "documentation": "^8.1.2",
-    "eslint": "^4.3.0",
-    "eslint-config-standard": "^10.2.1",
+    "documentation": "^12.0.1",
+    "eslint": "^6.0.1",
+    "eslint-config-standard": "^13.0.1",
     "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "mocha": "^5.2.0",
-    "mocha-eslint": "^4.1.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4",
+    "mocha-eslint": "^5.0.0",
     "nyc": "^14.1.1"
   },
   "dependencies": {

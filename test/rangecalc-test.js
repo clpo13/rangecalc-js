@@ -1,5 +1,6 @@
 // rangecalc - get the CIDR range of a set of IP addresses
 // Copyright (C) 2017–2019 Cody Logan
+// SPDX-License-Identifier: GPL-3.0-or-later
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,32 +15,31 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-var assert = require('assert')
-var rangecalc = require('../lib/rangecalc')
-var lint = require('mocha-eslint')
+const assert = require('assert')
+const rangecalc = require('../lib/rangecalc')
+const lint = require('mocha-eslint')
 
 describe('Rangecalc', function () {
   describe('IPv4', function () {
     it('should return the proper range', function () {
-      var start = '192.168.0.1'
-      var end = '192.168.0.254'
+      const start = '192.168.0.1'
+      const end = '192.168.0.254'
       assert(rangecalc.getCIDR(start, end) === 24)
     })
 
     it('should return 32 when the IP addresses are identical', function () {
-      var start = '192.168.0.1'
-      var end = start
-      assert(rangecalc.getCIDR(start, end) === 32)
+      const start = '192.168.0.1'
+      assert(rangecalc.getCIDR(start, start) === 32)
     })
 
     it('should return the right integer representation', function () {
-      var ip = '192.168.0.1'
+      const ip = '192.168.0.1'
       assert(rangecalc.toInt(ip) === 3232235521)
     })
 
     it('should order the addresses properly', function () {
-      var arr = ['192.168.0.1', '192.168.0.254', '192.168.0.50']
-      var sortedArr = rangecalc.sort(arr)
+      const arr = ['192.168.0.1', '192.168.0.254', '192.168.0.50']
+      const sortedArr = rangecalc.sort(arr)
       assert(sortedArr[2] === '192.168.0.254')
     })
   })
@@ -52,13 +52,13 @@ describe('Rangecalc', function () {
 })
 
 describe('lint', function () {
-  var paths = [
+  const paths = [
     'bin',
     'lib',
     'test'
   ]
 
-  var options = {
+  const options = {
     formatter: 'stylish',
     alwaysWarn: false,
     timeout: 5000,

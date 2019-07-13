@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-
 // rangecalc - get the CIDR range of a set of IP addresses
 // Copyright (C) 2017-2019 Cody Logan
+// SPDX-License-Identifier: GPL-3.0-or-later
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -19,6 +19,7 @@
 const ipaddr = require('ipaddr.js')
 const readline = require('readline')
 const rangecalc = require('../lib/rangecalc')
+const pjson = require('../package.json')
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -27,7 +28,7 @@ const rl = readline.createInterface({
   completer: completer
 })
 
-var ipAddresses = []
+let ipAddresses = []
 
 console.log("Enter an IP address or type '.help'.")
 rl.prompt()
@@ -35,12 +36,16 @@ rl.prompt()
 rl.on('line', (line) => {
   switch (line.trim()) {
     case 'calc':
-      var arr = rangecalc.sort(ipAddresses)
-      var cidr = rangecalc.getCIDR(arr[0], arr[arr.length - 1])
-      console.log('Range is ' + cidr)
+      if (ipAddresses.length > 0) {
+        const arr = rangecalc.sort(ipAddresses)
+        const cidr = rangecalc.getCIDR(arr[0], arr[arr.length - 1])
+        console.log('Range is /' + cidr)
+      } else {
+        console.log('List is empty')
+      }
       break
     case 'list':
-      for (var i in ipAddresses) {
+      for (const i in ipAddresses) {
         console.log(ipAddresses[i])
       }
       break
@@ -50,19 +55,29 @@ rl.on('line', (line) => {
       break
     case '.help':
     case '.h':
-      console.log('Input IP addresses one per line. Commands:\n' +
-        '\tlist - shows current list of IP addresses\n' +
-        '\tcalc - get the CIDR range\n' +
-        '\t.help, .h - show this text\n' +
-        '\t.exit, .quit, .q - exit the program')
+      console.log('Input IP addresses, one per line. Commands:\n' +
+        '\tlist               show the current list of IP addresses\n' +
+        '\tcalc               get the CIDR range of the IP list\n' +
+        '\t.help, .h          show this help text\n' +
+        '\t.version, .v       show program version and license info\n' +
+        '\t.exit, .quit, .q   exit the program\n')
+      break
+    case '.version':
+    case '.v':
+      console.log('rangecalc-cli v' + pjson.version + '\n\n' +
+        'Copyright (C) 2017-2019 Cody Logan. Licensed GPLv3+.\n' +
+        'This is free software, and you are welcome to modify\n' +
+        'and redistribute it under certain conditions.\n' +
+        '<https://www.gnu.org/licenses/gpl-3.0.en.html>\n')
       break
     case '.exit':
     case '.quit':
     case '.q':
       console.log('Bye!')
       process.exit(0)
+      break
     default:
-      var input = line.trim()
+      const input = line.trim()
       if (ipaddr.isValid(input)) {
         if (ipaddr.parse(input).kind() === 'ipv6') {
           console.log('Sorry, IPv6 addresses are not currently supported!')
