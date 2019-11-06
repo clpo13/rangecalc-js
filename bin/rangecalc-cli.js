@@ -56,8 +56,9 @@ rl.on('line', (line) => {
     case '.help':
     case '.h':
       console.log('Input IP addresses, one per line. Commands:\n' +
-        '\tlist               show the current list of IP addresses\n' +
         '\tcalc               get the CIDR range of the IP list\n' +
+        '\tclear              clear the IP address list\n' +
+        '\tlist               show the current list of IP addresses\n' +
         '\t.help, .h          show this help text\n' +
         '\t.version, .v       show program version and license info\n' +
         '\t.exit, .quit, .q   exit the program\n')
@@ -76,7 +77,7 @@ rl.on('line', (line) => {
       console.log('Bye!')
       process.exit(0)
       break
-    default:
+    default: {
       const input = line.trim()
       if (ipaddr.isValid(input)) {
         if (ipaddr.parse(input).kind() === 'ipv6') {
@@ -88,7 +89,7 @@ rl.on('line', (line) => {
       } else {
         console.log(input + ' is not a valid IP address')
       }
-      break
+    }
   }
   rl.prompt()
 }).on('close', () => {
