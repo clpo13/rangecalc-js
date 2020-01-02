@@ -4,7 +4,7 @@
   "description": "Find the CIDR range of a set of IP addresses.",
   "main": "./lib/rangecalc.js",
   "bin": {
-    "rangecalc-cli": "./bin/rangecalc-cli.js"
+    "rangecalc": "./bin/rangecalc-cli.js"
   },
   "scripts": {
     "test": "nyc mocha test",
@@ -28,13 +28,13 @@
   },
   "homepage": "https://github.com/clpo13/rangecalc-js#readme",
   "devDependencies": {
-    "acorn": "^6.3.0",
+    "acorn": "^6.4.0",
     "codecov": "^3.6.1",
     "diff": "^4.0.1",
-    "documentation": "^12.1.3",
-    "eslint": "^6.6.0",
+    "documentation": "^12.1.4",
+    "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
