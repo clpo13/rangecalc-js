@@ -65,8 +65,8 @@ rl.on('line', (line) => {
       break
     case '.version':
     case '.v':
-      console.log('rangecalc-cli v' + pjson.version + '\n\n' +
-        'Copyright (C) 2017-2019 Cody Logan. Licensed GPLv3+.\n' +
+      console.log('rangecalc v' + pjson.version + '\n\n' +
+        'Copyright (C) 2017, 2018, 2019 Cody Logan. Licensed GPLv3+.\n' +
         'This is free software, and you are welcome to modify\n' +
         'and redistribute it under certain conditions.\n' +
         '<https://www.gnu.org/licenses/gpl-3.0.en.html>\n')
