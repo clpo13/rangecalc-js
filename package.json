@@ -30,17 +30,17 @@
   "devDependencies": {
     "acorn": "^6.4.0",
     "codecov": "^3.6.1",
-    "diff": "^4.0.1",
+    "diff": "^4.0.2",
     "documentation": "^12.1.4",
     "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "mocha": "^6.2.2",
     "mocha-eslint": "^5.0.0",
-    "nyc": "^14.1.1"
+    "nyc": "^15.0.0"
   },
   "dependencies": {
     "ipaddr.js": "^1.9.1"
