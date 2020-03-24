@@ -76,7 +76,7 @@ rl.on('line', (line) => {
     case '.q':
       console.log('Bye!')
       process.exit(0)
-      break
+      break // eslint-disable-line no-unreachable
     default: {
       const input = line.trim()
       if (ipaddr.isValid(input)) {
