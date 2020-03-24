@@ -1,6 +1,6 @@
 {
   "name": "rangecalc",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Find the CIDR range of a set of IP addresses.",
   "main": "./lib/rangecalc.js",
   "bin": {
