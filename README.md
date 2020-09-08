@@ -12,7 +12,8 @@ Find the CIDR range of a set of IPv4 addresses. Requires [Node.js](https://nodej
 
 Install with `npm install rangecalc`. Use it in your code with `var rangecalc = require('rangecalc');`.
 
-A simple CLI program is included to demonstrate range calculation. Run with `rangecalc`.
+A simple CLI program is included to demonstrate range calculation. Run with `rangecalc`. You can even
+try it without installation by running `npx rangecalc`.
 
 ## Use it
 
