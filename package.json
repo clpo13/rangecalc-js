@@ -31,7 +31,7 @@
     "acorn": "^7.1.1",
     "codecov": "^3.6.1",
     "diff": "^4.0.2",
-    "documentation": "^12.1.4",
+    "documentation": "^13.0.2",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.1",
