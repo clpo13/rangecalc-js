@@ -1,8 +1,6 @@
 # rangecalc
 
-[![Build Status](https://travis-ci.org/clpo13/rangecalc-js.svg?branch=master)](https://travis-ci.org/clpo13/rangecalc-js)
-[![Dependency Status](https://david-dm.org/clpo13/rangecalc-js.svg)](https://david-dm.org/clpo13/rangecalc-js)
-[![devDependency Status](https://david-dm.org/clpo13/rangecalc-js/dev-status.svg)](https://david-dm.org/clpo13/rangecalc-js#info=devDependencies)
+[![Build Status](https://app.travis-ci.com/clpo13/rangecalc-js.svg?branch=master)](https://app.travis-ci.com/clpo13/rangecalc-js)
 [![codecov](https://codecov.io/gh/clpo13/rangecalc-js/branch/master/graph/badge.svg)](https://codecov.io/gh/clpo13/rangecalc-js)
 [![npm](https://img.shields.io/npm/v/rangecalc.svg)](https://www.npmjs.com/package/rangecalc)
 
