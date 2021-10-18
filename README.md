@@ -6,14 +6,14 @@
 [![codecov](https://codecov.io/gh/clpo13/rangecalc-js/branch/master/graph/badge.svg)](https://codecov.io/gh/clpo13/rangecalc-js)
 [![npm](https://img.shields.io/npm/v/rangecalc.svg)](https://www.npmjs.com/package/rangecalc)
 
-Find the CIDR range of a set of IPv4 addresses. Requires [Node.js](https://nodejs.org) 8 or later.
+Find the CIDR range of a set of IPv4 addresses. Requires [Node.js](https://nodejs.org).
 
 ## Get it
 
 Install with `npm install rangecalc`. Use it in your code with `var rangecalc = require('rangecalc');`.
 
-A simple CLI program is included to demonstrate range calculation. Run with `rangecalc`. You can even
-try it without installation by running `npx rangecalc`.
+A simple CLI program is included to demonstrate range calculation. Run with
+`rangecalc`. You can even try it without installation by running `npx rangecalc`.
 
 ## Use it
 
@@ -34,7 +34,7 @@ Install the devDependencies with `npm install`. Run tests with `npm test`. Pull 
 
 ## License
 
-Copyright &copy; 2017, 2018, 2019 Cody Logan
+Copyright &copy; 2017-2019 Cody Logan
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
